@@ -22,3 +22,6 @@ app.use(router);
 app.listen(port, () => {
     console.log(`Server is on, listening on ${port}`);
 });
+
+
+//! Modifier BDD via create_tables.sql et rajouter une table "contact" qui contiendra numéro de tel, localisation et page fb
