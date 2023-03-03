@@ -15,6 +15,8 @@ app.set('views', './app/views');
 
 // On indique à express le chemin des fichiers statiques
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'dist')))
+
 
 app.use(router);
 
@@ -22,6 +24,3 @@ app.use(router);
 app.listen(port, () => {
     console.log(`Server is on, listening on ${port}`);
 });
-
-
-//! Modifier BDD via create_tables.sql et rajouter une table "contact" qui contiendra numéro de tel, localisation et page fb
