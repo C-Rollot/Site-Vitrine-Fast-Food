@@ -3,7 +3,7 @@ const pg = require('pg');
 
 require('dotenv').config();
 
-const pgUrl = 'postgres://slk:oisifman@localhost/skyline';
+const pgUrl = 'postgres://oisifman:skyline@localhost/slk';
 
 const sequelize = new Sequelize(pgUrl, {
     define: {
