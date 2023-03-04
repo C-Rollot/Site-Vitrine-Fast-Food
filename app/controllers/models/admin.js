@@ -1,27 +1,30 @@
-const { Model, DataTypes } = require('sequelize');
+const {
+    Model,
+    DataTypes
+} = require('sequelize');
 const sequelize = require('../../db');
 
-class Plat extends Model{};
+class Admin extends Model {};
 
 
-Plat.init({
-    name: {
+Admin.init({
+    username: {
         type: DataTypes.TEXT,
         allowNull: false
     },
-    price: {
-        type: DataTypes.INTEGER,
+    email: {
+        type: DataTypes.STRING,
         allowNull: false
     },
-    description: {
+    password: {
         type: DataTypes.TEXT,
         allowNull: false
     }
 }, {
     sequelize: sequelize, // on mentionne la connexion à la BDD
-    tableName: "plat"
+    tableName: "admin"
 
 })
 
-
-module.exports = Plat;
+// on exporte la class directement !
+module.exports = Admin;

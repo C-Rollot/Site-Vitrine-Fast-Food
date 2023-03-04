@@ -1,4 +1,17 @@
-const Plat = require("./models/menu");
+const Plat = require("./menu");
+const Admin = require("./admin");
 
 
-module.exports = Plat;
+
+Admin.hasMany(Plat, {
+    foreignKey: "admin_id",
+    as: "plats"
+});
+
+Plat.belongsTo(Admin, {
+    foreignKey: "admin_id",
+    as: "admin"
+});
+
+
+module.exports = { Plat, Admin };
