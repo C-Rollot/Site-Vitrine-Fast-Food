@@ -16,6 +16,3 @@ const menuController = {
 }
 
 module.exports = menuController;
-
-
-//! Arrêt le 04/03 à 02:44, erreur de récupération de données sur findAll()

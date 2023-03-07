@@ -1,14 +1,15 @@
 <%- include('./partials/header') %>
 
-<h2>Notre carte</h2>
+<h2 class="text-3xl font-semibold">Notre carte</h2>
 
 <ul>
     <% menuData.forEach(plat => { %>
-        <li><p class="text-xl"><%= plat.name %></p></li>
+        <li><p class="text-xl font-semibold"><%= plat.name %></p></li>
         <li><p class="text-2xl"><%= plat.price %>€</p></li>
         <li><p class="text-lg"><%= plat.description %></p></li>
         <li><img src='<%= plat.image %>' alt="<%= plat.name %>"</li>
     <% }) %>
     </ul>
+
 </body>
 </html>
