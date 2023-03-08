@@ -15,7 +15,6 @@ app.set('views', './app/views');
 
 // On indique à express le chemin des fichiers statiques
 app.use(express.static(path.join(__dirname, 'public/css')));
-app.use(express.static(path.join(__dirname, 'public/js')));
 app.use(express.static(path.join(__dirname, 'dist')));
 
 
