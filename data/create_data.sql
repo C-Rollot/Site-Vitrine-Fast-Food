@@ -51,9 +51,22 @@ INSERT INTO "admin" ("username", "email", "password") VALUES
 -- Insertion des données dans la table "plat"
 -- -----------------------------------------------
 INSERT INTO "plat" ("name", "price", "description", "image", "admin_id") VALUES
-('Kebab', 7, 'lorem ipsum del kebab', 'https://assets.afcdn.com/recipe/20210304/118354_w1024h1024c1cx1060cy707.webp', 1),
+('Kebab', 7, 'Pain kebab, viandes (2 max.), sauce et crudités au choix', 'https://assets.afcdn.com/recipe/20210304/118354_w1024h1024c1cx1060cy707.webp', 1),
 
-('Tacos', 8, 'lorem ipsum del tacos', 'https://img.cuisineaz.com/660x660/2019/04/17/i146583-tacos-poulet-curry.jpeg', 1);
+('Tacos', 8, 'Galette, viandes (2 max.), sauce et crudités au choix', 'https://img.cuisineaz.com/660x660/2019/04/17/i146583-tacos-poulet-curry.jpeg', 1),
+
+('Burger', 8, 'Pain burger, viandes (2 max.), sauce et crudités au choix', 'https://img.cuisineaz.com/660x660/2019/04/17/i146583-tacos-poulet-curry.jpeg', 1),
+
+('Galette', 7, 'Galette légère, viandes (2 max.), sauce et crudités au choix', 'https://img.cuisineaz.com/660x660/2019/04/17/i146583-tacos-poulet-curry.jpeg', 1),
+
+('Royal', 10, 'Double pain kebab, viandes (2 max.), sauce et crudités au choix', 'https://img.cuisineaz.com/660x660/2019/04/17/i146583-tacos-poulet-curry.jpeg', 1),
+
+('Bazooka', 11, 'Double tacos, viandes (2 max.), sauce et crudités au choix', 'https://img.cuisineaz.com/660x660/2019/04/17/i146583-tacos-poulet-curry.jpeg', 1),
+
+('King', 10, 'Maxi burger, viandes (2 max.), sauce et crudités au choix', 'https://img.cuisineaz.com/660x660/2019/04/17/i146583-tacos-poulet-curry.jpeg', 1),
+
+('Assiette', 11, 'Assiette Garnie, viandes (2 max.), sauce et crudités au choix', 'https://img.cuisineaz.com/660x660/2019/04/17/i146583-tacos-poulet-curry.jpeg', 1);
+
 
 -- -----------------------------------------------
 -- Insertion des données dans la table "contact"

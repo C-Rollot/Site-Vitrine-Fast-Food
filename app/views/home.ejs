@@ -1,8 +1,9 @@
 <%- include('./partials/header') %>
-<div id="home-body">
-        <h2 class="lg:text-6xl font-semibold text-white text-center mt-16 md:text-4xl sm:text-3xl text-3xl">Bienvenue dans votre restaurant!</h2>
 
-        <p class="lg:text-4xl text-white text-center mt-20 max-w-7xl xl:mx-auto lg:mx-20 md:mx-10 sm:mx-8 mx-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium necessitatibus harum recusandae! Culpa, illum modi fugiat fuga hic suscipit et molestiae tempora ullam, dolor ad dolore perferendis, porro saepe fugit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt est natus facere quidem. Animi, expedita omnis natus alias laudantium esse?</p>
+<div id="home-body">
+        <h2 class="lg:text-5xl font-semibold text-gray-600 text-center mt-16 md:text-4xl sm:text-3xl text-3xl">Bienvenue dans votre restaurant!</h2>
+
+        <p class="lg:text-3xl opacity-75 text-gray-600 text-center mt-20 max-w-7xl xl:mx-auto lg:mx-20 md:mx-10 sm:mx-8 mx-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium necessitatibus harum recusandae! Culpa, illum modi fugiat fuga hic suscipit et molestiae tempora ullam, dolor ad dolore perferendis, porro saepe fugit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt est natus facere quidem. Animi, expedita omnis natus alias laudantium esse?</p>
 
     <div id="buttons" class="flex justify-around max-w-md mx-auto mt-10">
 
@@ -17,11 +18,33 @@
         <a href="/contact">
             <button
                 type="button"
-                class="inline-block rounded bg-neutral-800 px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-neutral-50 shadow-[0_4px_9px_-4px_#332d2d] transition duration-150 ease-in-out hover:bg-neutral-800 hover:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.3),0_4px_18px_0_rgba(51,45,45,0.2)] focus:bg-neutral-800 focus:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.3),0_4px_18px_0_rgba(51,45,45,0.2)] focus:outline-none focus:ring-0 active:bg-neutral-900 active:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.3),0_4px_18px_0_rgba(51,45,45,0.2)] dark:bg-neutral-900 dark:shadow-[0_4px_9px_-4px_#171717] dark:hover:bg-neutral-900 dark:hover:shadow-[0_8px_9px_-4px_rgba(27,27,27,0.3),0_4px_18px_0_rgba(27,27,27,0.2)] dark:focus:bg-neutral-900 dark:focus:shadow-[0_8px_9px_-4px_rgba(27,27,27,0.3),0_4px_18px_0_rgba(27,27,27,0.2)] dark:active:bg-neutral-900 dark:active:shadow-[0_8px_9px_-4px_rgba(27,27,27,0.3),0_4px_18px_0_rgba(27,27,27,0.2)]">
+                class="inline-block rounded bg-neutral-800 px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-yellow-300 shadow-[0_4px_9px_-4px_#332d2d] transition duration-150 ease-in-out hover:bg-neutral-800 hover:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.3),0_4px_18px_0_rgba(51,45,45,0.2)] focus:bg-neutral-800 focus:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.3),0_4px_18px_0_rgba(51,45,45,0.2)] focus:outline-none focus:ring-0 active:bg-neutral-900 active:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.3),0_4px_18px_0_rgba(51,45,45,0.2)] dark:bg-neutral-900 dark:shadow-[0_4px_9px_-4px_#171717] dark:hover:bg-neutral-900 dark:hover:shadow-[0_8px_9px_-4px_rgba(27,27,27,0.3),0_4px_18px_0_rgba(27,27,27,0.2)] dark:focus:bg-neutral-900 dark:focus:shadow-[0_8px_9px_-4px_rgba(27,27,27,0.3),0_4px_18px_0_rgba(27,27,27,0.2)] dark:active:bg-neutral-900 dark:active:shadow-[0_8px_9px_-4px_rgba(27,27,27,0.3),0_4px_18px_0_rgba(27,27,27,0.2)]">
                 Contactez-nous
         </button>
         </a>
     </div>
-</div>    
-    
-<%- include('./partials/footer') %>
+</div>   
+
+
+
+</main>
+
+
+
+<footer class="invisible absolute w-full bottom-0 p-4 bg-opacity-0 border-t-2 sm:visible md:flex md:items-center md:justify-between md:p-6 xl:visible xl:w-11/12 xl:ml-20 dark:bg-gray-800">
+    <span class="text-sm text-gray-600 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:text-white ease-in-out duration-200">OisifCode™</a>. All Rights Reserved.
+    </span>
+    <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-600 dark:text-gray-400 sm:mt-0">
+        <li>
+            <a href="https://github.com/C-Rollot" class="mr-4 md:mr-6 hover:text-white ease-in-out duration-200">GitHub</a>
+        </li>
+        <li>
+            <a href="#" class="mr-4 md:mr-6 hover:text-white ease-in-out duration-200">Autres projets</a>
+        </li>
+        <li>
+            <a href="mailto:clement.rollot71@gmail.com" class="mr-4 md:mr-6 hover:text-white ease-in-out duration-200">Me Contacter</a>
+        </li>
+    </ul>
+</footer>
+</body>
+</html>
