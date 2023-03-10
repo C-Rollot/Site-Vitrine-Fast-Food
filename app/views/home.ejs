@@ -1,40 +1,89 @@
 <%- include('./partials/header') %>
 
-<div id="home-body" class="lg:mt-40">
-        <h2 class="text-2xl font-semibold text-gray-900 text-center mt-16 md:text-4xl">Bienvenue dans votre restaurant!</h2>
+    <main> 
+        <div id="home-body">
+            <div class="lg:h-24 lg:w-11/12 lg:rounded-lg mt-2 sm:mx-auto relative isolate flex items-center gap-x-6 overflow-hidden bg-green-900 py-2.5 px-6 sm:px-3.5 sm:before:flex-1">
+                <svg viewBox="0 0 577 310" aria-hidden="true" class="absolute top-1/2 left-[max(-7rem,calc(50%-52rem))] -z-10 w-[36.0625rem] -translate-y-1/2 transform-gpu blur-2xl">
+                  <path id="1d77c128-3ec1-4660-a7f6-26c7006705ad" fill="url(#49a52b64-16c6-4eb9-931b-8e24bf34e053)" fill-opacity=".3" d="m142.787 168.697-75.331 62.132L.016 88.702l142.771 79.995 135.671-111.9c-16.495 64.083-23.088 173.257 82.496 97.291C492.935 59.13 494.936-54.366 549.339 30.385c43.523 67.8 24.892 159.548 10.136 196.946l-128.493-95.28-36.628 177.599-251.567-140.953Z" />
+                  <defs>
+                    <linearGradient id="49a52b64-16c6-4eb9-931b-8e24bf34e053" x1="614.778" x2="-42.453" y1="26.617" y2="96.115" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#9089FC" />
+                      <stop offset="1" stop-color="#FF80B5" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <svg viewBox="0 0 577 310" aria-hidden="true" class="absolute top-1/2 left-[max(45rem,calc(50%+8rem))] -z-10 w-[36.0625rem] -translate-y-1/2 transform-gpu blur-2xl">
+                  <use href="#1d77c128-3ec1-4660-a7f6-26c7006705ad" />
+                </svg>
+                <div id="wkd-add" class="flex flex-wrap items-center gap-y-2 gap-x-4">
+                  <p class="text-sm lg:text-xl leading-6 text-neutral-50">
+                    <strong class="font-semibold lg:text-xl">World Kebab Day 2023</strong><svg viewBox="0 0 2 2" class="mx-2 inline h-0.5 w-0.5 fill-current" aria-hidden="true"><circle cx="1" cy="1" r="1" /></svg>Rejoignez-nous le 14 Juillet pour le World Kebab Day!
+                  </p>
+                  <a href="https://www.daysoftheyear.com/days/kebab-day/" target="_blank" rel="noopener noreferrer" class="flex-none rounded-full bg-gray-900 py-1 px-3.5 text-sm font-semibold text-yellow-400 shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900">En savoir plus<span aria-hidden="true">&rarr;</span></a>
+                </div>
+                <div class="flex flex-1 justify-end">
+                </div>
+            </div>
+                <h2 class="text-2xl font-semibold text-gray-900 text-center mt-8 lg:mt-12 md:text-4xl">Bienvenue dans votre restaurant!</h2>
 
-        <p class="lg:text-3xl opacity-75 text-gray-900 text-center mt-20 max-w-7xl xl:mx-auto lg:mx-20 md:mx-10 sm:mx-8 mx-8">Partez à la découverte des saveurs du monde en goûtant nos plats, soigneusement personnalisés et préparés pour vous. N'attendez plus, découvrez notre carte!</p>
+                <p class="lg:text-3xl opacity-75 text-gray-900 text-center mt-20 max-w-7xl xl:mx-auto lg:mx-20 md:mx-10 sm:mx-8 mx-8">Partez à la découverte des saveurs du monde en goûtant nos plats, soigneusement personnalisés et préparés pour vous. N'attendez plus, découvrez notre carte!</p>
 
-    <div id="buttons" class="flex justify-around max-w-md mx-auto mt-20">
+            <div id="navigation-buttons" class="flex justify-around max-w-md mx-auto mt-20">
 
-        <a href="/menu">
-            <button href="/menu"
-                type="button"
-                class="inline-block rounded bg-blue-500 px-6 pt-2.5 pb-2 text-xs hover:border-2 hover:border-blue-500 font-medium uppercase leading-normal text-neutral-100 hover:text-neutral-800 shadow-[0_4px_9px_-4px_#fbfbfb] transition duration-150 ease-in-out hover:bg-neutral-100 hover:shadow-[0_8px_9px_-4px_rgba(251,251,251,0.3),0_4px_18px_0_rgba(251,251,251,0.2)] focus:bg-neutral-100 focus:shadow-[0_8px_9px_-4px_rgba(251,251,251,0.3),0_4px_18px_0_rgba(251,251,251,0.2)] focus:outline-none focus:ring-0 active:bg-neutral-200 active:shadow-[0_8px_9px_-4px_rgba(251,251,251,0.3),0_4px_18px_0_rgba(251,251,251,0.2)]">
-                Découvrez notre carte
-            </button>
-        </a>
+                <a href="/menu">
+                    <button href="/menu"
+                        type="button"
+                        class="inline-block rounded bg-blue-500 px-6 pt-2.5 pb-2 text-xs hover:border-2 hover:border-blue-500 font-medium uppercase leading-normal text-neutral-100 hover:text-neutral-800 shadow-[0_4px_9px_-4px_#fbfbfb] transition duration-150 ease-in-out hover:bg-neutral-100 hover:shadow-[0_8px_9px_-4px_rgba(251,251,251,0.3),0_4px_18px_0_rgba(251,251,251,0.2)] focus:bg-neutral-100 focus:shadow-[0_8px_9px_-4px_rgba(251,251,251,0.3),0_4px_18px_0_rgba(251,251,251,0.2)] focus:outline-none focus:ring-0 active:bg-neutral-200 active:shadow-[0_8px_9px_-4px_rgba(251,251,251,0.3),0_4px_18px_0_rgba(251,251,251,0.2)]">
+                        Découvrez notre carte
+                    </button>
+                </a>
 
-        <a href="/contact">
-            <button
-                type="button"
-                class="inline-block rounded bg-neutral-100 hover:bg-blue-500 px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-blue-500 hover:text-neutral-100 shadow-[0_4px_9px_-4px_#332d2d] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.3),0_4px_18px_0_rgba(51,45,45,0.2)] focus:bg-neutral-800 focus:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.3),0_4px_18px_0_rgba(51,45,45,0.2)] focus:outline-none focus:ring-0 active:bg-neutral-900 active:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.3),0_4px_18px_0_rgba(51,45,45,0.2)] dark:bg-neutral-900 dark:shadow-[0_4px_9px_-4px_#171717] dark:hover:bg-neutral-900 dark:hover:shadow-[0_8px_9px_-4px_rgba(27,27,27,0.3),0_4px_18px_0_rgba(27,27,27,0.2)] dark:focus:bg-neutral-900 dark:focus:shadow-[0_8px_9px_-4px_rgba(27,27,27,0.3),0_4px_18px_0_rgba(27,27,27,0.2)] dark:active:bg-neutral-900 dark:active:shadow-[0_8px_9px_-4px_rgba(27,27,27,0.3),0_4px_18px_0_rgba(27,27,27,0.2)]">
-                Contactez-nous
-        </button>
-        </a>
-    </div>
-
-    <div id="highlights">
-        <h3 class="text-xl font-semibold text-gray-900 md:text-3xl">Notre sélection du moment</h3>
-        
-    </div>
-</div>   
-
-
-
+                <a href="/contact">
+                    <button
+                        type="button"
+                        class="inline-block rounded bg-neutral-100 hover:bg-blue-500 px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-blue-500 hover:text-neutral-100 shadow-[0_4px_9px_-4px_#332d2d] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.3),0_4px_18px_0_rgba(51,45,45,0.2)] focus:bg-neutral-800 focus:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.3),0_4px_18px_0_rgba(51,45,45,0.2)] focus:outline-none focus:ring-0 active:bg-neutral-900 active:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.3),0_4px_18px_0_rgba(51,45,45,0.2)] dark:bg-neutral-900 dark:shadow-[0_4px_9px_-4px_#171717] dark:hover:bg-neutral-900 dark:hover:shadow-[0_8px_9px_-4px_rgba(27,27,27,0.3),0_4px_18px_0_rgba(27,27,27,0.2)] dark:focus:bg-neutral-900 dark:focus:shadow-[0_8px_9px_-4px_rgba(27,27,27,0.3),0_4px_18px_0_rgba(27,27,27,0.2)] dark:active:bg-neutral-900 dark:active:shadow-[0_8px_9px_-4px_rgba(27,27,27,0.3),0_4px_18px_0_rgba(27,27,27,0.2)]">
+                        Contactez-nous
+                </button>
+                </a>
+            </div>
+            <div id="bottom-infos" class="lg:w-11/12 mx-4 py-6 sm:mx-auto sm:px-6 lg:px-8 lg:mt-12">
+                <div class="sm:flex sm:space-x-4">
+                    <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow transform transition-all mb-4 w-full sm:w-1/3 sm:my-8">
+                        <div class="bg-red-800 p-5">
+                            <div class="sm:flex sm:items-start">
+                                <div class="text-center sm:mt-0 sm:ml-2 sm:text-left">
+                                    <h3 class="text-lg leading-6 font-medium text-neutral-50">Aliments</h3>
+                                    <p class="text-3xl font-bold text-yellow-400">De qualité, traçables</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow transform transition-all mb-4 w-full sm:w-1/3 sm:my-8">
+                        <div class="bg-red-800 p-5">
+                            <div class="sm:flex sm:items-start">
+                                <div class="text-center sm:mt-0 sm:ml-2 sm:text-left">
+                                    <h3 class="text-lg leading-6 font-medium text-neutral-50">Plats</h3>
+                                    <p class="text-3xl font-bold text-yellow-400">Préparés avec soin</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow transform transition-all mb-4 w-full sm:w-1/3 sm:my-8">
+                        <div class="bg-red-800 p-5">
+                            <div class="sm:flex sm:items-start">
+                                <div class="text-center sm:mt-0 sm:ml-2 sm:text-left">
+                                    <h3 class="text-lg leading-6 font-medium text-neutral-50">Notre équipe</h3>
+                                    <p class="text-3xl font-bold text-yellow-400">Agréable et dévouée</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
 </main>
 
-
+<!--!Finir ajustement de la taille des bottom-infos-->
 
 <footer class="invisible absolute w-full bottom-0 p-4 bg-opacity-0 border-t-2 border-blue-500 sm:visible md:flex md:items-center md:justify-between md:p-6 xl:visible xl:w-11/12 xl:ml-20 dark:bg-gray-800">
     <span class="text-sm text-gray-900 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:text-blue-500 ease-in-out duration-200">OisifCode™</a>. All Rights Reserved.
