@@ -4,6 +4,7 @@ const menuController = {
 
     menuPage: async (req, res) => {
 
+        // Get the data from the DB and send it to the view
         try {
             const menuData = await Plat.findAll({
                 include: "admin"
