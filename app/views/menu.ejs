@@ -1,5 +1,7 @@
+<!-- Include the header -->
 <%- include('./partials/header') %>
 
+  <!-- Include the event banner -->
   <%- include('./partials/wkd'); %>
 
   <div class="bg-white">
@@ -8,6 +10,7 @@
 
       <div class="mt-6 grid grid-cols-2 lg:grid-cols 4 gap-y-14 gap-x-5 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
         
+        <!-- EJS loop to load each card with menu data from the database -->
         <% menuData.forEach(plat => { %>
         <div class="group relative">
           <div class="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
@@ -33,5 +36,5 @@
     </div>
   </div>
 
-
+<!-- Include the footer -->
 <%- include('./partials/footer') %>

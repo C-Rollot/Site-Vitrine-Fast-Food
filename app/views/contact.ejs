@@ -1,7 +1,10 @@
+<!-- Include the header -->
 <%- include('./partials/header') %>
 
+    <!-- Include the footer -->
     <%- include('./partials/wkd'); %>
 
+    <!-- Contact info section -->
     <section class="bg-white py-16 lg:flex justify-around">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="max-w-lg mx-auto">
@@ -44,11 +47,14 @@
           </div>
         </div>
 
+        <!-- Small div to put the vertical border between infos and the map -->
         <div class="hidden lg:block border-r-2 border-blue-500"></div>
 
+        <!-- Google Maps integration -->
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2728.895697286706!2d4.632542615801433!3d46.84574314821799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f256df270188b3%3A0xa7a6283eab1251a1!2sSaint%20Leger%20Kebab!5e0!3m2!1sfr!2sfr!4v1678468299417!5m2!1sfr!2sfrstyle="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="mx-auto lg:mr-56 mt-10 lg:mt-0 w-80 h-80 lg:w-1/3 lg:h-96"></iframe>
     </section>
 
+    <!-- Comment form section -->
     <div class="text-center w-11/12 mx-auto border-t-2 border-blue-500 p-10">
         <h2 class="text-3xl font-semibold text-gray-900">Laissez-nous un commentaire!</h2>
         <p class="lg:text-lg text-gray-900 mt-10">Vous avez passé un bon moment? Vous trouvez que certains points sont à améliorer? Donnez-nous votre avis! Nous serons ravis de vous lire et éventuellement vous répondre.</p>
@@ -75,5 +81,5 @@
         </form>
     </div>
         
-
+<!-- Include the footer -->
 <%- include('./partials/footer') %>

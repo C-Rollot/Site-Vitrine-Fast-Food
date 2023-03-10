@@ -1,15 +1,19 @@
+<!-- Include the header -->
 <%- include('./partials/header') %>
 
         <div id="home-body">
           
+            <!-- Include the event banner -->
             <%- include('./partials/wkd'); %>
 
+            <!-- Main title -->
                 <h2 class="text-2xl font-semibold text-gray-900 text-center mt-8 lg:mt-24 md:text-4xl">Bienvenue dans votre restaurant!</h2>
 
                 <p class="lg:text-3xl opacity-75 text-gray-900 text-center mt-20 max-w-7xl xl:mx-auto lg:mx-20 md:mx-10 sm:mx-8 mx-8">Partez à la découverte des saveurs du monde en goûtant nos plats, soigneusement personnalisés et préparés pour vous. N'attendez plus, découvrez notre carte!</p>
 
             <div id="navigation-buttons" class="flex justify-around max-w-md mx-auto mt-20">
 
+            <!-- Menu - contact buttons -->
                 <a href="/menu">
                     <button href="/menu"
                         type="button"
@@ -26,6 +30,8 @@
                 </button>
                 </a>
             </div>
+
+            <!-- Bottom information cards -->
             <div id="bottom-infos" class="lg:w-11/12 mx-4 py-6 sm:mx-auto sm:px-6 lg:px-8 lg:mt-4">
                 <div class="sm:flex sm:space-x-4">
                     <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden transform transition-all mb-4 w-full sm:w-1/3 sm:my-8 shadow-2xl">
@@ -68,21 +74,5 @@
         </div>  
 </main>
 
-
-<footer class="invisible absolute w-full bottom-0 p-4 bg-opacity-0 border-t-2 border-blue-500 sm:visible md:flex md:items-center md:justify-between md:p-6 xl:visible xl:w-11/12 xl:ml-20 dark:bg-gray-800">
-    <span class="text-sm text-gray-900 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:text-blue-500 ease-in-out duration-200">OisifCode™</a>. All Rights Reserved.
-    </span>
-    <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-600 dark:text-gray-400 sm:mt-0">
-        <li>
-            <a href="https://github.com/C-Rollot" class="mr-4 md:mr-6 hover:text-blue-500 ease-in-out duration-200">GitHub</a>
-        </li>
-        <li>
-            <a href="#" class="mr-4 md:mr-6 hover:text-blue-500 ease-in-out duration-200">Autres projets</a>
-        </li>
-        <li>
-            <a href="mailto:clement.rollot71@gmail.com" class="mr-4 md:mr-6 hover:text-blue-500 ease-in-out duration-200">Me Contacter</a>
-        </li>
-    </ul>
-</footer>
-</body>
-</html>
+<!-- Include the footer -->
+<%- include('./partials/footer'); %>
