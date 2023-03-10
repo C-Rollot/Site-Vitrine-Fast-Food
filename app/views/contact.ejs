@@ -2,7 +2,78 @@
 
     <%- include('./partials/wkd'); %>
 
-<h2>Contactez-nous</h2>
+    <section class="bg-white py-16 lg:flex justify-around">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-lg mx-auto">
+            <h2 class="text-3xl font-extrabold text-gray-900">Contactez-nous</h2>
+            <div class="mt-9 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+              <div>
+                <label for="company_website" class="block text-lg font-semibold text-gray-900">
+                  Adresse
+                </label>
+                <div class="mt-2">
+                  <p class="text-base text-gray-900">12 Place du Capitaine Giraud</p>
+                  <p class="text-base text-gray-900">71510 Saint-Léger-sur-Dheune</p>
+                </div>
+              </div>
+              <div>
+                <label for="phone_number" class="block text-lg font-semibold text-gray-900">
+                  Téléphone
+                </label>
+                <div class="mt-2">
+                  <a href="tel:03-85-46-47-70" class="text-base text-gray-900">03 85 46 47 70</a>
+                </div>
+              </div>
+              <div class="sm:col-span-2">
+                <label for="email" class="block text-lg font-semibold text-gray-900">
+                  Email
+                </label>
+                <div class="mt-2">
+                  <a href="#" class="text-base text-gray-900">yourname@example.com</a>
+                </div>
+              </div>
+              <div class="sm:col-span-2">
+                <label for="facebook" class="block text-lg font-semibold text-gray-900">
+                  Page Facebook
+                </label>
+                <div class="mt-2">
+                  <p class="text-base text-gray-900"><a href="https://www.facebook.com/stlegerkebab/?locale=fr_FR">Saint-Léger Kebab</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <div class="hidden lg:block border-r-2 border-blue-500"></div>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2728.895697286706!2d4.632542615801433!3d46.84574314821799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f256df270188b3%3A0xa7a6283eab1251a1!2sSaint%20Leger%20Kebab!5e0!3m2!1sfr!2sfr!4v1678468299417!5m2!1sfr!2sfrstyle="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="mx-auto lg:mr-56 mt-10 lg:mt-0 w-80 h-80 lg:w-1/3 lg:h-96"></iframe>
+    </section>
+
+    <div class="text-center w-11/12 mx-auto border-t-2 border-blue-500 p-10">
+        <h2 class="text-3xl font-semibold text-gray-900">Laissez-nous un commentaire!</h2>
+        <p class="lg:text-lg text-gray-900 mt-10">Vous avez passé un bon moment? Vous trouvez que certains points sont à améliorer? Donnez-nous votre avis! Nous serons ravis de vous lire et éventuellement vous répondre.</p>
+        <form class="max-w-lg mx-auto py-4 mt-10">
+            <div class="mb-4">
+            <label for="first-name" class="block text-blue-500 font-semibold mb-2">Prénom</label>
+            <input type="text" id="first-name" name="first-name" class="rounded-lg border-gray-500 border-2 py-2 px-4 w-full">
+            </div>
+            <div class="mb-4">
+            <label for="last-name" class="block text-blue-500 font-semibold mb-2">Nom</label>
+            <input type="text" id="last-name" name="last-name" class="rounded-lg border-gray-500 border-2 py-2 px-4 w-full">
+            </div>
+            <div class="mb-4">
+            <label for="email" class="block text-blue-500 font-semibold mb-2">Adresse Email</label>
+            <input type="email" id="email" name="email" class="rounded-lg border-gray-500 border-2 py-2 px-4 w-full">
+            </div>
+            <div class="mb-4">
+            <label for="comment" class="block text-blue-500 font-semibold mb-2">Commentaire</label>
+            <textarea id="comment" name="comment" rows="5" class="rounded-lg border-gray-500 border-2 py-2 px-4 w-full"></textarea>
+            </div>
+            <div class="flex justify-end">
+            <button type="submit" class="bg-blue-500 hover:bg-blue-600 ease-in-out duration-200 text-white font-bold py-2 px-4 rounded-full">Valider</button>
+            </div>
+        </form>
+    </div>
+        
 
 <%- include('./partials/footer') %>
