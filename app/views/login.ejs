@@ -4,13 +4,23 @@
     <!-- Include the event banner -->
     <%- include('./partials/wkd') %>
 
-    <h2 class="text-3xl mt-8 mx-10 font-semibold text-gray-900">Connexion</h2>
+    <!-- Alert message for standard users-->
+    <div class="flex gap-1 w-11/12 mt-4 mx-auto lg:w-2/5 lg:mt-8">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-red-500">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m0-10.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.75c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.249-8.25-3.286zm0 13.036h.008v.008H12v-.008z" />
+      </svg>
+      
+      <p class="text-red-500 font-semibold">Cette section est réservée aux administrateurs. En tant que client(e), veuillez vous 
+      rendre <a href="/" class="underline">ici</a>.</p>
+    </div>
+
+    <h2 class="text-3xl mt-8 mx-10 font-semibold text-gray-900 lg:text-4xl lg:mt-14 lg:text-center">Connexion</h2>
 
     <!-- Login form -->
-    <form class="w-4/5 mx-10 mt-5">
+    <form class="w-4/5 mx-10 mt-5 lg:w-2/5 lg:mx-auto lg:mt-20">
         <div class="md:flex md:items-center mb-6">
           <div class="w-full">
-            <label class="block text-gray-900 text-xs font-bold mb-2" for="username">
+            <label class="block text-gray-900 text-md font-bold mb-2" for="username">
               Nom d'utilisateur ou adresse mail
             </label>
             <input class="appearance-none bg-gray-200 border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-900 leading-tight focus:outline-none focus:bg-white focus:border-blue-500" name="username" type="text" placeholder="Pseudo, adresse mail...">
@@ -18,7 +28,7 @@
         </div>
         <div class="md:flex md:items-center mb-6">
           <div class="w-full">
-            <label class="block text-gray-900 text-xs font-bold mb-2" for="password">
+            <label class="block text-gray-900 text-md font-bold mb-2" for="password">
               Mot de passe
             </label>
             <input class="appearance-none bg-gray-200 border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-900 leading-tight focus:outline-none focus:bg-white focus:border-blue-500" name="password" type="password" placeholder="Mot de passe...">
@@ -30,7 +40,3 @@
           </div>
         </div>
       </form>
-
-
-<!-- Include the footer -->
-<%- include('./partials/footer') %>
