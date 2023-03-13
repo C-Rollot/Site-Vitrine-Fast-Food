@@ -17,11 +17,11 @@
     <h2 class="text-3xl mt-8 mx-10 font-semibold text-gray-900 lg:text-4xl lg:mt-14 lg:text-center">Connexion</h2>
 
     <!-- Login form -->
-    <form class="w-4/5 mx-10 mt-5 lg:w-2/5 lg:mx-auto lg:mt-20">
+    <form method="post" class="w-4/5 mx-10 mt-5 lg:w-2/5 lg:mx-auto lg:mt-20">
         <div class="md:flex md:items-center mb-6">
           <div class="w-full">
             <label class="block text-gray-900 text-lg font-bold mb-2" for="username">
-              Nom d'utilisateur ou adresse mail
+              Nom d'utilisateur
             </label>
             <input class="appearance-none bg-gray-200 border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-900 leading-tight focus:outline-none focus:bg-white focus:border-blue-500" name="username" type="text" placeholder="Pseudo, adresse mail...">
           </div>
@@ -34,9 +34,16 @@
             <input class="appearance-none bg-gray-200 border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-900 leading-tight focus:outline-none focus:bg-white focus:border-blue-500" name="password" type="password" placeholder="Mot de passe...">
           </div>
         </div>
+
+        <% if(locals.error) { %>
+          <p class="text-red-500 font-semibold mb-2"><%= error %></p>
+        <% } %>
+
         <div class="md:flex md:items-center">
           <div class="w-full">
             <button type="submit" class="bg-blue-500 hover:bg-blue-600 ease-in-out duration-200 text-white font-bold py-2 px-4 rounded-full">Se Connecter</button>
           </div>
         </div>
       </form>
+
+      <!--!Finir page login, afficher erreur "utilisateur introuvable" sous l'input username-->

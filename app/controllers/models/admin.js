@@ -23,7 +23,6 @@ Admin.init({
 }, {
     sequelize: sequelize, // on mentionne la connexion à la BDD
     tableName: "admin"
-
 })
 
 // on exporte la class directement !

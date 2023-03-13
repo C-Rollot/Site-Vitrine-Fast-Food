@@ -1,26 +1,42 @@
-// On require dotenv pour avoir accès aux variables d'environnement (port et connexion à la db)
+// Require dotenv to get access to env variables (port and DB conenection)
 require('dotenv').config();
 
 const path = require('path');
 const express = require('express');
 const router = require('./app/router');
+const session = require('express-session');
 
 const port = process.env.PORT || 1664;
 
 const app = express();
 
-// On initialise ejs et on lui indique le chemin des vues
+// Initialize express-session (used for admin authentication)
+app.use(
+    session({
+        saveUninitialized: true,
+        resave: true,
+        secret: 'Un secret pour signer les id de sessions'
+    })
+);
+
+app.use((req, res, next) => {
+    res.locals = req.session;
+    next();
+})
+
+// Initialize EJS and give it views path
 app.set('view engine', 'ejs');
 app.set('views', './app/views');
 
-// On indique à express le chemin des fichiers statiques
+// Indicate to Express path to static files
 app.use(express.static(path.join(__dirname, 'public/css')));
 app.use(express.static(path.join(__dirname, 'dist')));
 
+app.use(express.urlencoded({extended: true}));
 
 app.use(router);
 
-// On démarre le serveur
+// Start server
 app.listen(port, () => {
     console.log(`Server is on, listening on ${port}`);
 }); 

@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS "contact" (
 -- Insertion des données dans la table "admin"
 -- -----------------------------------------------
 INSERT INTO "admin" ("username", "email", "password") VALUES
-('admin', 'admin@example.com', 'admin');
+('admin', 'admin@example.com', 'superadmin');
 
 -- -----------------------------------------------
 -- Insertion des données dans la table "plat"
