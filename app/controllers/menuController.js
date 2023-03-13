@@ -11,7 +11,7 @@ const menuController = {
             });
             res.render('menu', { menuData });
         } catch (error) {
-            throw new Error(error);
+            res.status(500).send("Une erreur serveur est survenue.");
         }
     }
 }

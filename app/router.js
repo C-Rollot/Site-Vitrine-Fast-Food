@@ -13,5 +13,6 @@ router.get('/', mainController.homePage);
 router.get('/menu', menuController.menuPage);
 router.get('/contact', contactController.contactPage);
 router.get('/login', loginController.loginPage);
+//router.post('/login', loginController.handleLoginForm);
 
 module.exports = router;

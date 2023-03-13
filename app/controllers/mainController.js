@@ -3,7 +3,7 @@ const mainController = {
         try {
             res.render('home');
         } catch (error) {
-            throw new Error(error);
+            res.status(500).send("Une erreur serveur est survenue.");
         }
     }
 }
