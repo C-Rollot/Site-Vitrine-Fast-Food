@@ -26,6 +26,12 @@
             <input class="appearance-none bg-gray-200 border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-900 leading-tight focus:outline-none focus:bg-white focus:border-blue-500" name="username" type="text" placeholder="Pseudo, adresse mail...">
           </div>
         </div>
+
+         <!-- Error message in case of incorrect username -->
+         <% if(locals.userError) { %>
+          <p class="text-red-500 font-semibold mb-2"><%= userError %></p>
+        <% } %>
+
         <div class="md:flex md:items-center mb-6">
           <div class="w-full">
             <label class="block text-gray-900 text-lg font-bold mb-2" for="password">
@@ -35,6 +41,7 @@
           </div>
         </div>
 
+        <!-- Error message in case of incorrect password -->
         <% if(locals.error) { %>
           <p class="text-red-500 font-semibold mb-2"><%= error %></p>
         <% } %>

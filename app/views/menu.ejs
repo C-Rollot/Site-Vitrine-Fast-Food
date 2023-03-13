@@ -6,28 +6,51 @@
 
   <div class="bg-white">
     <div class="mx-auto max-w-3xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-      <h2 class="text-2xl font-bold tracking-tight text-gray-900">Notre carte</h2>
+      <div class="flex gap-2">
+        <h2 class="text-2xl font-bold tracking-tight text-gray-900">Notre carte</h2>
+
+        
+        <% if(locals.user) { %>
+          <a href="/add" class="text-xl underline fond-semibold text-gray-900 mt-2 h-8 w-8">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.75-11.25a.75.75 0 00-1.5 0v2.5h-2.5a.75.75 0 000 1.5h2.5v2.5a.75.75 0 001.5 0v-2.5h2.5a.75.75 0 000-1.5h-2.5v-2.5z" clip-rule="evenodd" />
+            </svg>        
+          </a>
+        <% } %>
+      </div>
 
       <div class="mt-6 grid grid-cols-2 lg:grid-cols 4 gap-y-14 gap-x-5 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
         
         <!-- EJS loop to load each card with menu data from the database -->
         <% menuData.forEach(plat => { %>
-        <div class="group relative">
-          <div class="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
+        <div class="relative">
+          <div class="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none lg:h-80">
             <img src="https://assets.afcdn.com/recipe/20210304/118354_w1024h1024c1cx1060cy707.webp" alt="<%= plat.name %>" class="h-full w-full object-cover object-center lg:h-full lg:w-full">
           </div>
           <div class="mt-4 flex justify-between">
             <div>
               <h3 class="text-sm text-gray-700">
-                <a href="#" class="text-xl font-semibold">
+                <p class="text-xl font-semibold">
                   <span aria-hidden="true" class="absolute inset-0"></span>
                   <%= plat.name %>
-                </a>
+                </p>
               </h3>
               <p class="mt-1 text-sm text-gray-500"><%= plat.description %></p>
             </div>
             <p class="text xl font-semibold text-gray-900"><%= plat.price %>€</p>
           </div>
+
+          <% if(locals.user) { %>
+
+            <a href="/edit/:<%= plat.id %>">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-8 h-8 absolute text-white bg-green-700 rounded-md mt-2 mb-2">
+                <path d="M5.433 13.917l1.262-3.155A4 4 0 017.58 9.42l6.92-6.918a2.121 2.121 0 013 3l-6.92 6.918c-.383.383-.84.685-1.343.886l-3.154 1.262a.5.5 0 01-.65-.65z" />
+                <path d="M3.5 5.75c0-.69.56-1.25 1.25-1.25H10A.75.75 0 0010 3H4.75A2.75 2.75 0 002 5.75v9.5A2.75 2.75 0 004.75 18h9.5A2.75 2.75 0 0017 15.25V10a.75.75 0 00-1.5 0v5.25c0 .69-.56 1.25-1.25 1.25h-9.5c-.69 0-1.25-.56-1.25-1.25v-9.5z"  />
+              </svg>
+            </a>
+  
+            <% } %>
+
         </div>
 
       <% }) %>   

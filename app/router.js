@@ -5,6 +5,7 @@ const mainController = require('./controllers/mainController');
 const menuController = require('./controllers/menuController');
 const contactController = require('./controllers/contactController');
 const loginController = require('./controllers/loginController');
+const adminController = require('./controllers/adminController');
 
 const router = express.Router();
 
@@ -15,5 +16,6 @@ router.get('/contact', contactController.contactPage);
 router.get('/login', loginController.loginPage);
 router.post('/login', loginController.handleLoginForm);
 router.get('/logout', loginController.handleLogout);
+router.get('/add', adminController.addToMenuPage);
 
 module.exports = router;
