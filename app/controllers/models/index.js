@@ -1,5 +1,6 @@
 const Plat = require("./menu");
 const Admin = require("./admin");
+const Avis = require("./avis");
 
 
 
@@ -14,4 +15,4 @@ Plat.belongsTo(Admin, {
 });
 
 
-module.exports = { Plat, Admin };
+module.exports = { Plat, Admin, Avis };

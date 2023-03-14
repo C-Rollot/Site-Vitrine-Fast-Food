@@ -86,4 +86,4 @@ const adminController = {
 
 module.exports = adminController;
 
-//! Arrêt le 13/03 21:55, prochaines étapes: Régler le souci d'affichage des photos / Finir feature modification de plat / Faire feature de suppression de plat 
+//! Arrêt le 14/03 10:55, prochaines étapes: Régler le souci d'affichage des photos (dernier) / Faire feature ajout de commentaires + espace commentaires
