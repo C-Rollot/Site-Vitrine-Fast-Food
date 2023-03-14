@@ -1,33 +1,121 @@
-<!-- Include the header -->
-<%- include('./partials/header') %>
+<!--! Here we have to put the entire header and footer because of the relative / absolute class that we must put. In partials they won't work, and the footer will not be at the bottom of the page if there is not enough comments to fill the screen. To counter this we put it in absolute, and the container in relative. Now the footer is always at the bottom, where it should be. -->
 
-<!-- Include event banner -->
-<%- include('./partials/wkd') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Inter:wght@600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Fast-Food</title>
+</head>
 
 
-<h2 class="text-gray-900 text-2xl font-semibold ml-4 mt-4 mb-4 lg:ml-20 lg:mt-8">Avis clients - <%= comment.length %></h2>
+<header>
 
-<div class="justify-center relative top-1/3">
+<!-- Title -->
+  <div class="bg-white lg:bg-opacity-0 pb-3 border-b-2 border-blue-500 lg:w-11/12 lg:mx-auto">
+    <div class="px-6 pt-6 lg:px-8">
+      <nav class="flex items-center justify-between" aria-label="Global">
+        <div class="flex lg:flex-1">
+          <a href="/" class="-m-1.5 p-1.5 flex gap-2 sm:gap-5">
+            <span class="sr-only">Fast-Food</span>
+            <img class="h-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
+            <h2 class="text-gray-900 sm:text-2xl font-semibold">Fast-Food</h2>
+          </a>
+        </div>
 
-    <!-- This is an example component -->
-    <% comment.forEach(commentaire => { %>
-        <div class="relative grid grid-cols-1 gap-4 p-4 mb-8 mx-auto w-11/12 border rounded-lg bg-white shadow-lg lg:w-3/5">
-            <div class="relative flex gap-4">
-                <div class="flex flex-col w-full">
-                    <div class="flex flex-row justify-between">
-                        <p class="relative text-xl whitespace-nowrap truncate overflow-hidden"><%= commentaire.first_name %> <%= commentaire.last_name %></p>
+        <!-- Navbar links -->
+        <div class="flex gap-2 lg:gap-x-12">
+          <a href="/" class="text-xs sm:text-base font-semibold leading-6 text-gray-900 hover:text-blue-500 ease-in-out duration-200">Accueil</a>
+  
+          <a href="/menu" class="text-xs sm:text-base font-semibold leading-6 text-gray-900 hover:text-blue-500 ease-in-out duration-200">Carte</a>
+    
+          <a href="/contact" class="text-xs sm:text-base font-semibold leading-6 text-gray-900 hover:text-blue-500 ease-in-out duration-200">Contact</a>
+
+          <a href="/comments" class="text-xs sm:text-base font-semibold leading-6 text-gray-900 hover:text-blue-500 ease-in-out duration-200">Avis</a>
+        </div>
+        <div class="lg:flex lg:flex-1 lg:justify-end">
+
+          <% if(locals.user) { %>
+            <a href="/logout" class="hidden sm:flex text-base font-semibold leading-6 text-gray-900 hover:text-blue-500 ease-in-out duration-200">Se déconnecter<span aria-hidden="true">&rarr;</span></a>
+            <a href="/logout" class="sm:hidden"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
+            </svg>
+            </a>
+          <% } else { %>
+            <a href="/login" class="hidden sm:flex text-base font-semibold leading-6 text-gray-900 hover:text-blue-500 ease-in-out duration-200">Log in (Admin) <span aria-hidden="true">&rarr;</span></a>
+            <a href="/login" class="sm:hidden"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg></a>
+          <% } %> 
+
+        </div>
+      </nav>
+    </div>
+  </div>
+
+</header>
+
+<body>
+  <main class="relative">
+
+    <!-- Include event banner -->
+    <%- include('./partials/wkd') %>
+
+
+    <h2 class="text-gray-900 text-2xl font-semibold ml-4 mt-4 mb-4 lg:ml-20 lg:mt-8">Avis clients - <%= comment.length %></h2>
+
+    <div class="justify-center relative top-1/3">
+
+        <!-- Loop on table that contains comments to display them -->
+        <% comment.forEach(commentaire => { %>
+
+            <div class="relative grid grid-cols-1 gap-4 p-4 mb-8 mx-auto w-11/12 border rounded-lg bg-white shadow-lg lg:w-3/5">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 bg-blue-500 text-neutral-50 p-1 rounded-3xl float-left mr-2 my-3 lg:mr-4 lg:my-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                    </svg>
+                    
+                    <div class="relative flex gap-4">
+                        <div class="flex flex-col w-full">
+                            <div class="flex flex-row justify-between">
+                                <p class="relative text-xl whitespace-nowrap truncate overflow-hidden"><%= commentaire.first_name %> <%= commentaire.last_name %></p>
+                            </div>
+                            <p class="text-gray-400 text-sm"><%= commentaire.created_at %></p>
+                        </div>
                     </div>
-                    <p class="text-gray-400 text-sm"><%= commentaire.created_at %></p>
+                    <p class="text-gray-500 ml-14 mt-2"><%= commentaire.commentaire %></p>
                 </div>
             </div>
-            <p class="-mt-4 text-gray-500"><%= commentaire.commentaire %></p>
+        
+        <% }) %>
+        
+        
+        
         </div>
-    
-    <% }) %>
-    
-    
-    
-    </div>
 
-    <!-- Include the footer -->
-    <%- include('./partials/footer') %>
+    </main>
+
+
+    <footer class="invisible absolute w-full bottom-0 p-4 bg-white border-t-2 border-blue-500 sm:visible md:flex md:items-center md:justify-between md:p-6 xl:visible xl:w-11/12 xl:ml-20 dark:bg-gray-800">
+        <span class="text-sm text-gray-600 sm:text-center dark:text-gray-400">2023 <a href="https://flowbite.com/" class="hover:text-blue-500 ease-in-out duration-200">OisifCode</a>.
+        </span>
+        <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-600 dark:text-gray-400 sm:mt-0">
+            <li>
+                <a href="https://github.com/C-Rollot" target="_blank" class="mr-4 md:mr-6 hover:text-blue-500 ease-in-out duration-200">GitHub</a>
+            </li>
+            <li>
+                <a href="#" target="_blank" class="mr-4 md:mr-6 hover:text-blue-500 ease-in-out duration-200">Autres projets</a>
+            </li>
+            <li>
+                <a href="mailto:clement.rollot71@gmail.com" target="_blank" class="mr-4 md:mr-6 hover:text-blue-500 ease-in-out duration-200">Me Contacter</a>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>
