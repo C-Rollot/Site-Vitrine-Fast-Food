@@ -18,5 +18,7 @@ router.post('/login', loginController.handleLoginForm);
 router.get('/logout', loginController.handleLogout);
 router.get('/add', adminController.addToMenuPage);
 router.post('/add', adminController.handleAddToMenu);
+router.get('/edit/:id', adminController.editMealPage);
+router.post('/edit/:id', adminController.handleMealEdit);
 
 module.exports = router;

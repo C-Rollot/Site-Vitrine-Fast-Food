@@ -2,8 +2,8 @@ const { localsName } = require('ejs');
 const { Plat } = require('./models');
 
 const adminController = {
-    // Page display
-    addToMenuPage : async (req, res) => {
+    // New meal page display
+    addToMenuPage: (req, res) => {
         try {
             if (res.locals.user) {
                 res.render('addPage');
@@ -32,6 +32,39 @@ const adminController = {
         } catch (error) {
             res.status(500).send('Une erreur serveur est survenue.');
             console.error(error);
+        }
+    },
+    // Edit meal page display
+    editMealPage: (req, res) => {
+        try {
+            if(res.locals.user) {
+                res.render('editPage');
+            } else {
+                res.status(403).send("Vous n'avez pas la permission d'accéder à cette page. Seul un administrateur connecté peut y accéder.");
+            }
+        } catch (error) {
+            res.status(500).send('Une erreur serveur est survenue.');
+        }
+    },
+    // Handle form submission
+    handleMealEdit: async (req, res) => {
+        const { name, description, price, image } = req.body;
+        const mealId = req.params.id;
+
+        try {
+            const foundMeal = await Plat.findByPk(mealId);
+
+            foundMeal.update({
+                name,
+                description,
+                price,
+                image
+            });
+
+            res.redirect('/menu');
+        } catch (error) {
+            res.status(500).send('Une erreur serveur est survenue.');
+            console.log(error);
         }
     }
 }

@@ -1,0 +1,32 @@
+<!-- Include the header -->
+<%- include('./partials/header'); %>
+
+<!-- Include the event banner -->
+<%- include('./partials/wkd'); %>
+
+<div class="text-center w-11/12 mx-auto p-10">
+    <h2 class="text-3xl font-semibold text-gray-900">Ajouter un plat</h2>
+
+    <!-- Meal informations form -->
+    <form method="post" class="max-w-lg mx-auto py-4 mt-10">
+        <div class="mb-4">
+        <label for="name" class="block text-gray-900 text-xs sm:text-lg font-bold mb-2">Titre</label>
+        <input type="text" id="name" name="name" placeholder="Titre..." class="appearance-none bg-gray-200 border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-900 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
+        </div>
+        <div class="mb-4">
+        <label for="description" class="block text-gray-900 text-xs sm:text-lg font-bold mb-2">Description</label>
+        <input type="text" id="description" name="description" placeholder="Description..." class="appearance-none bg-gray-200 border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-900 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
+        </div>
+        <div class="mb-4">
+        <label for="price" class="block text-gray-900 text-xs sm:text-lg font-bold mb-2">Prix</label>
+        <input type="number" id="price" name="price" placeholder="Prix..." class="appearance-none bg-gray-200 border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-900 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
+        </div>
+        <div class="mb-4">
+        <label for="comment" class="block text-gray-900 text-xs sm:text-lg font-bold mb-2">Image</label>
+        <input type="file" id="image" name="image" class="appearance-none bg-gray-200 border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-900 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
+        </div>
+        <div class="flex justify-end">
+        <button type="submit" class="bg-blue-500 hover:bg-blue-600 ease-in-out duration-200 text-white font-bold py-2 px-4 rounded-full">Valider</button>
+        </div>
+    </form>
+</div>
