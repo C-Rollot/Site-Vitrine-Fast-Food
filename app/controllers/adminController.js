@@ -1,12 +1,18 @@
-const { Plat, Admin } = require('./models');
+const { localsName } = require('ejs');
+const { Plat } = require('./models');
 
 const adminController = {
     // Page display
     addToMenuPage : async (req, res) => {
         try {
-            res.render('addPage');
+            if (res.locals.user) {
+                res.render('addPage');
+            } else {
+                res.status(403).send("Vous n'avez pas la permission d'accéder à cette page. Seul un administateur connecté peut y accéder.");
+            }
         } catch (error) {
             res.status(500).send('Une erreur serveur est survenue.');
+            console.log(error);
         }
     },
     // Handle form submission
@@ -22,8 +28,6 @@ const adminController = {
                 admin_id: 1
             })
 
-            console.log(addedMeal);
-
             res.redirect('/menu');
         } catch (error) {
             res.status(500).send('Une erreur serveur est survenue.');
@@ -34,4 +38,4 @@ const adminController = {
 
 module.exports = adminController;
 
-//! Arrêt le 13/03 21:55, prochaines étapes: Régler le souci d'affichage des photos / Sécuriser l'accès à l'espace admin / Finir feature modification de plat / Faire feature de suppression de plat 
+//! Arrêt le 13/03 21:55, prochaines étapes: Régler le souci d'affichage des photos / Finir feature modification de plat / Faire feature de suppression de plat 

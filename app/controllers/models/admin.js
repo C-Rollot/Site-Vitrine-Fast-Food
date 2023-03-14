@@ -1,7 +1,4 @@
-const {
-    Model,
-    DataTypes
-} = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../../db');
 
 class Admin extends Model {};
@@ -21,9 +18,9 @@ Admin.init({
         allowNull: false
     }
 }, {
-    sequelize: sequelize, // on mentionne la connexion à la BDD
+    sequelize: sequelize, // Mention DB connection
     tableName: "admin"
 })
 
-// on exporte la class directement !
+
 module.exports = Admin;
