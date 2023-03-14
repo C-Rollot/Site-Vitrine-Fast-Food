@@ -20,5 +20,6 @@ router.get('/add', adminController.addToMenuPage);
 router.post('/add', adminController.handleAddToMenu);
 router.get('/edit/:id', adminController.editMealPage);
 router.post('/edit/:id', adminController.handleMealEdit);
+router.get('/delete/:id', adminController.handleMealDelete);
 
 module.exports = router;

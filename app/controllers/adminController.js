@@ -66,6 +66,21 @@ const adminController = {
             res.status(500).send('Une erreur serveur est survenue.');
             console.log(error);
         }
+    },
+    // Delete a meal
+    handleMealDelete: async (req, res) => {
+        const mealId = req.params.id;
+
+        try {
+            const foundMeal = await Plat.findByPk(mealId);
+
+            foundMeal.destroy();
+
+            res.redirect('/menu');
+        } catch (error) {
+            res.status(500).send('Une erreur serveur est survenue.');
+            console.log(error);
+        }
     }
 }
 
