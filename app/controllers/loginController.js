@@ -19,7 +19,7 @@ const loginController = {
                 }
             });
 
-            // Check that the user actually exists
+            // Check that user actually exists
             if (!foundUser) {
                 return res.render('login', {
                     userError: "Utilisateur introuvable!"
@@ -33,7 +33,7 @@ const loginController = {
                 });
             }
             
-            // Add the user to the session
+            // Add user to the session
             req.session.user = foundUser;
             
             // Delete the session's password for safety

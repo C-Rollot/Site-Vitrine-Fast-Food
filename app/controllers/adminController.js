@@ -1,6 +1,7 @@
 const { Plat, Admin } = require('./models');
 
 const adminController = {
+    // Page display
     addToMenuPage : async (req, res) => {
         try {
             res.render('addPage');
@@ -8,6 +9,7 @@ const adminController = {
             res.status(500).send('Une erreur serveur est survenue.');
         }
     },
+    // Handle form submission
     handleAddToMenu: async (req, res) => {
         const { name, description, price, image } = req.body;
 

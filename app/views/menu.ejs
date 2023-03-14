@@ -9,14 +9,17 @@
       <div class="flex gap-2">
         <h2 class="text-2xl font-bold tracking-tight text-gray-900">Notre carte</h2>
 
-        
+        <!-- "+" buttons only appears when admin is connected -->
         <% if(locals.user) { %>
+
           <a href="/add" class="text-xl underline fond-semibold text-gray-900 mt-2 h-8 w-8">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.75-11.25a.75.75 0 00-1.5 0v2.5h-2.5a.75.75 0 000 1.5h2.5v2.5a.75.75 0 001.5 0v-2.5h2.5a.75.75 0 000-1.5h-2.5v-2.5z" clip-rule="evenodd" />
             </svg>        
           </a>
+
         <% } %>
+
       </div>
 
       <div class="mt-6 grid grid-cols-2 lg:grid-cols 4 gap-y-14 gap-x-5 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
@@ -40,6 +43,7 @@
             <p class="text xl font-semibold text-gray-900"><%= plat.price %>€</p>
           </div>
 
+          <!-- "Edit" button only appears when admin is connected -->
           <% if(locals.user) { %>
 
             <a href="/edit/:<%= plat.id %>">
