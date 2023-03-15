@@ -22,7 +22,7 @@ Plat.init({
         allowNull: false
     }
 }, {
-    sequelize: sequelize, // on mentionne la connexion à la BDD
+    sequelize: sequelize,
     tableName: "plat"
 
 })
