@@ -9,7 +9,7 @@
 
     <div class="justify-center relative top-1/3">
 
-        <!-- Loop on table that contains comments to display them -->
+        <!-- Loop on the table that contains comments to display them -->
         <% comment.forEach(commentaire => { %>
 
             <div class="relative grid grid-cols-1 gap-4 p-4 mb-8 mx-auto w-11/12 border rounded-lg bg-white shadow-lg lg:w-3/5">
@@ -27,6 +27,11 @@
                         </div>
                     </div>
                     <p class="text-gray-500 ml-14 mt-2"><%= commentaire.commentaire %></p>
+
+                    <!-- When the customer posts their comment, email is needed. When admin is connected, they can see the email and answer to the comment by contacting the customer -->
+                    <% if(locals.user) { %>
+                        <p class="text-gray-500 ml-14 mt-2"><%= commentaire.email %> - <a href="mailto:<%= commentaire.email %>" class="underline text-gray-900 font-semibold hover:text-blue-500 ease-in-out duration-200">Répondre</a></p>
+                    <% } %>
                 </div>
             </div>
         
