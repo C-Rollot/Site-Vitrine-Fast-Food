@@ -16,6 +16,10 @@ Plat.init({
     description: {
         type: DataTypes.TEXT,
         allowNull: false
+    },
+    image: {
+        type: DataTypes.TEXT,
+        allowNull: false
     }
 }, {
     sequelize: sequelize, // on mentionne la connexion à la BDD

@@ -64,21 +64,21 @@ INSERT INTO "admin" ("username", "email", "password") VALUES
 -- Insertion des données dans la table "plat"
 -- -----------------------------------------------
 INSERT INTO "plat" ("name", "price", "description", "image", "admin_id") VALUES
-('Kebab', 7, 'Pain kebab, viandes (2 max.), sauce et crudités au choix', 'kebab.jpg', 1),
+('Kebab', 7, 'Pain kebab, viandes (2 max.), sauce et crudités au choix', 'https://assets.afcdn.com/recipe/20210304/118354_w1024h1024c1cx1060cy707.webp', 1),
 
-('Tacos', 8, 'Galette, viandes (2 max.), sauce et crudités au choix', 'tacos.jpeg', 1),
+('Tacos', 8, 'Galette, viandes (2 max.), sauce et crudités au choix', 'https://img.cuisineaz.com/660x660/2019/04/17/i146583-tacos-poulet-curry.jpeg', 1),
 
-('Burger', 8, 'Pain burger, viandes (2 max.), sauce et crudités au choix', 'burger.jpg', 1),
+('Burger', 8, 'Pain burger, viandes (2 max.), sauce et crudités au choix', 'https://assets.afcdn.com/recipe/20161216/61596_w1024h768c1cx2808cy1872.webp', 1),
 
-('Galette', 7, 'Galette légère, viandes (2 max.), sauce et crudités au choix', 'galette.jpeg', 1),
+('Galette', 7, 'Galette légère, viandes (2 max.), sauce et crudités au choix', 'https://img.cuisineaz.com/660x660/2021/07/11/i179649-tortilla-kebab.jpeg', 1),
 
-('Royal', 10, 'Double pain kebab, viandes (2 max.), sauce et crudités au choix', 'kebab.jpg', 1),
+('Royal', 10, 'Double pain kebab, viandes (2 max.), sauce et crudités au choix', 'https://assets.afcdn.com/recipe/20210304/118354_w1024h1024c1cx1060cy707.webp', 1),
 
-('Bazooka', 11, 'Double tacos, viandes (2 max.), sauce et crudités au choix', 'tacos.jpeg', 1),
+('Bazooka', 11, 'Double tacos, viandes (2 max.), sauce et crudités au choix', 'https://img.cuisineaz.com/660x660/2019/04/17/i146583-tacos-poulet-curry.jpeg', 1),
 
-('King', 10, 'Maxi burger, viandes (2 max.), sauce et crudités au choix', 'burger.jpg', 1),
+('King', 10, 'Maxi burger, viandes (2 max.), sauce et crudités au choix', 'https://assets.afcdn.com/recipe/20161216/61596_w1024h768c1cx2808cy1872.webp', 1),
 
-('Assiette', 11, 'Assiette Garnie, viandes (2 max.), sauce et crudités au choix', 'assiete.jpg', 1);
+('Assiette', 11, 'Assiette Garnie, viandes (2 max.), sauce et crudités au choix', 'https://media-cdn.tripadvisor.com/media/photo-s/18/ca/e7/84/notre-assiette-kebab.jpg', 1);
 
 
 -- -----------------------------------------------

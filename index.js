@@ -29,6 +29,7 @@ app.set('view engine', 'ejs');
 app.set('views', './app/views');
 
 // Indicate to Express path to static files
+app.use(express.static(path.join(__dirname, './public')))
 app.use(express.static(path.join(__dirname, 'dist')));
 
 app.use(express.urlencoded({extended: true}));
