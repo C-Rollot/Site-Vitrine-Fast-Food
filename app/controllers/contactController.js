@@ -2,7 +2,7 @@ const { Avis } = require('./models');
 
 const contactController = {
     // Display page
-    contactPage: (req, res) => {
+    getContactPage: (req, res) => {
         try {
             res.render('contact');
         } catch (error) {
@@ -26,7 +26,7 @@ const contactController = {
             console.log(error);
         }
     },
-    commentPage: async (req, res) => {
+    getCommentPage: async (req, res) => {
         try {
             const comment = await Avis.findAll();
 

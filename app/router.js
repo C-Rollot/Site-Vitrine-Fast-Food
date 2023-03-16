@@ -12,22 +12,22 @@ const router = express.Router();
 // Define routes and methods that will be called in the controllers
 
 // Display main pages
-router.get('/', mainController.homePage);
-router.get('/menu', menuController.menuPage);
-router.get('/contact', contactController.contactPage);
-router.get('/comments', contactController.commentPage);
+router.get('/', mainController.getHomePage);
+router.get('/menu', menuController.getMenuPage);
+router.get('/contact', contactController.getContactPage);
+router.get('/comments', contactController.getCommentPage);
 
 // Login / logout
-router.get('/login', loginController.loginPage);
+router.get('/login', loginController.getLoginPage);
 router.post('/login', loginController.handleLoginForm);
 router.get('/logout', loginController.handleLogout);
 
 // Create / Update / Delete meals
-router.get('/add', adminController.addToMenuPage);
-router.post('/add', adminController.handleAddToMenu);
-router.get('/edit/:id', adminController.editMealPage);
-router.post('/edit/:id', adminController.handleMealEdit);
-router.get('/delete/:id', adminController.handleMealDelete);
+router.get('/add', adminController.getCreationPage);
+router.post('/add', adminController.createMeal);
+router.get('/edit/:id', adminController.getUpdatePage);
+router.post('/edit/:id', adminController.updateMeal);
+router.get('/delete/:id', adminController.deleteMeal);
 
 // Post customers comments
 router.post('/contact', contactController.handleCommentSend);

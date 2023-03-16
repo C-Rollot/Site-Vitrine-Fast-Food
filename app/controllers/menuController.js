@@ -2,7 +2,7 @@ const { Plat } = require('./models');
 
 const menuController = {
 
-    menuPage: async (req, res) => {
+    getMenuPage: async (req, res) => {
 
         // Get the data from the DB and send it to the view
         try {

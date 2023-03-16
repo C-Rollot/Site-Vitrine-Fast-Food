@@ -1,7 +1,7 @@
 const { Admin } = require('./models');
 
 const loginController = {
-    loginPage: (req, res) => {
+    getLoginPage: (req, res) => {
         try {
             res.render('login');
         } catch (error) {

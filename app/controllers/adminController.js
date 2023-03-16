@@ -3,12 +3,12 @@ const { Plat } = require('./models');
 
 const adminController = {
     // New meal page display
-    addToMenuPage: (req, res) => {
+    getCreationPage: (req, res) => {
         try {
             if (res.locals.user) {
                 res.render('addPage');
             } else {
-                res.status(403).send("Vous n'avez pas la permission d'accéder à cette page. Seul un administateur connecté peut y accéder.");
+                res.status(401).send("Vous n'avez pas la permission d'accéder à cette page. Seul un administateur connecté peut y accéder.");
             }
         } catch (error) {
             res.status(500).send('Une erreur serveur est survenue.');
@@ -16,16 +16,16 @@ const adminController = {
         }
     },
     // Handle form submission
-    handleAddToMenu: async (req, res) => {
+    createMeal: async (req, res) => {
         const { name, description, price, image } = req.body;
 
             try {
-            const addedMeal = await Plat.create({
-                name,
-                description,
-                price,
-                image,
-                admin_id: 1
+                await Plat.create({
+                    name,
+                    description,
+                    price,
+                    image,
+                    admin_id: 1
             })
 
             res.redirect('/menu');
@@ -35,19 +35,19 @@ const adminController = {
         }
     },
     // Edit meal page display
-    editMealPage: (req, res) => {
+    getUpdatePage: (req, res) => {
         try {
             if(res.locals.user) {
                 res.render('editPage');
             } else {
-                res.status(403).send("Vous n'avez pas la permission d'accéder à cette page. Seul un administrateur connecté peut y accéder.");
+                res.status(401).send("Vous n'avez pas la permission d'accéder à cette page. Seul un administrateur connecté peut y accéder.");
             }
         } catch (error) {
             res.status(500).send('Une erreur serveur est survenue.');
         }
     },
     // Handle form submission
-    handleMealEdit: async (req, res) => {
+    updateMeal: async (req, res) => {
         const { name, description, price, image } = req.body;
         const mealId = req.params.id;
 
@@ -68,7 +68,7 @@ const adminController = {
         }
     },
     // Delete a meal
-    handleMealDelete: async (req, res) => {
+    deleteMeal: async (req, res) => {
         const mealId = req.params.id;
 
         try {
@@ -85,5 +85,3 @@ const adminController = {
 }
 
 module.exports = adminController;
-
-//! Arrêt le 14/03 10:55, prochaines étapes: Régler le souci d'affichage des photos (dernier) / Faire feature ajout de commentaires + espace commentaires

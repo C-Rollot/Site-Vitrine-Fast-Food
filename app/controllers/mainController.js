@@ -1,5 +1,5 @@
 const mainController = {
-    homePage: (req, res) => {
+    getHomePage: (req, res) => {
         try {
             res.render('home');
         } catch (error) {

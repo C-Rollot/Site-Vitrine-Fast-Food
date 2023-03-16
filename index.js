@@ -15,7 +15,7 @@ app.use(
     session({
         saveUninitialized: true,
         resave: true,
-        secret: 'Un secret pour signer les id de sessions'
+        secret: process.env.SECRET
     })
 );
 
