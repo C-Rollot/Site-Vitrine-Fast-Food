@@ -6,6 +6,7 @@ const menuController = require('./controllers/menuController');
 const contactController = require('./controllers/contactController');
 const loginController = require('./controllers/loginController');
 const adminController = require('./controllers/adminController');
+const signupController = require('./controllers/signupController');
 
 const router = express.Router();
 
@@ -17,10 +18,11 @@ router.get('/menu', menuController.getMenuPage);
 router.get('/contact', contactController.getContactPage);
 router.get('/comments', contactController.getCommentPage);
 
-// Login / logout
+// Login / logout / signup
 router.get('/login', loginController.getLoginPage);
 router.post('/login', loginController.handleLoginForm);
 router.get('/logout', loginController.handleLogout);
+router.get('/signup', signupController.getSignupPage);
 
 // Create / Update / Delete meals
 router.get('/add', adminController.getCreationPage);
